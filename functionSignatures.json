@@ -1,0 +1,9 @@
+{
+"irfanview":
+{
+  "inputs":
+  [
+    {"name":"filename", "kind":"required", "type":[["filepath"], ["folderpath"], "char"], "multiplicity":"append"}
+  ]
+}
+}
