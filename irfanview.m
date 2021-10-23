@@ -1,6 +1,6 @@
 function irfanview(filenames)
 
-exe = fullfile(fileparts(mfilename('fullpath')), 'iview457_x64', ...
+exe = fullfile(fileparts(mfilename('fullpath')), 'private', 'iview457_x64', ...
     'i_view64.exe');
 exe = [exe, ' '];
 
