@@ -2,7 +2,7 @@ function irfanview(filenames)
 
 exe = fullfile(fileparts(mfilename('fullpath')), 'private', 'iview457_x64', ...
     'i_view64.exe');
-exe = [exe, ' '];
+exe = sprintf('"%s" ', exe);
 
 if (nargin == 1) && strcmp(filenames, 'close')
     cmd = [exe, '/killmesoftly'];
