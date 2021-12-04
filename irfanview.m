@@ -2,17 +2,14 @@ function irfanview(filenames)
 
 exe = fullfile(fileparts(mfilename('fullpath')), 'private', 'iview457_x64', ...
     'i_view64.exe');
-exe = sprintf('"%s" ', exe);
 
 if (nargin == 1) && strcmp(filenames, 'close')
-    cmd = [exe, '/killmesoftly'];
+    cmd = sprintf('"%s" /killmesoftly', exe);
     dos(cmd);
 else
     filenames = convert_filenames(filenames);
     for n = 1:numel(filenames)
-        cmd = exe;
-        cmd = [cmd, sprintf('"%s" ', filenames{n})];
-        cmd = [cmd, sprintf('&')];
+        cmd = sprintf('"%s" "%s" &', exe, filenames{n});
         dos(cmd);
     end
 end
