@@ -9,7 +9,7 @@ if (nargin == 1) && strcmp(filenames, 'close')
 else
     filenames = convert_filenames(filenames);
     for n = 1:numel(filenames)
-        cmd = sprintf('"%s" "%s" &', exe, filenames{n});
+        cmd = sprintf('"%s" "%s" &', exe, fullpath(filenames{n}));
         dos(cmd);
     end
 end
